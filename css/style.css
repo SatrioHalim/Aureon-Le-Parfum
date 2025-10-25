@@ -1,0 +1,17 @@
+ :root{
+    --primary: #C8A951;
+    --secondary: #1C1C1C;
+    --light: #F5F5F5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
