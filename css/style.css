@@ -76,9 +76,63 @@ body{
     display: none;
 }
 
+/* Hero Section */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/fragrance-hero_section.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
+/* Gradasi di gambar hero_section biar baur ama bg, di bagian bawah gambar, 0deg -> to up (keatas) */
+.hero::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1,1,3,1) 8%, rgba(255,255,255,0) 50%);
+}
 
+.hero .content{
+    padding: 1.4rem 7%;
+    max-width: 50rem;
+}
 
+.hero .content h1{
+    font-size: 5em;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+.hero .content h1 span{
+    color: var(--primary);
+}
+.hero .content p{
+    font-size: 1.6rem;
+    color: white;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    mix-blend-mode: difference; /*biar teksnya lebih keliatan di background gambar*/
+}
+
+.hero .content .cta{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
 
 /* Media Queries */
 
