@@ -5,15 +5,15 @@ Auréon Parfum is a premium fragrance website built using HTML, CSS, and JavaScr
 This project showcases an elegant product display, smooth user interactions, and a secure, easy-to-use payment flow simulation.
 
 ## Features
-- ✨ Elegant UI/UX designed to reflect a premium fragrance brand
+- ✨ Elegant UI/UX designed to reflect a premium fragrance brand ✅
 
-- 🧴 Product Showcase for premium perfume collections
+- 🧴 Product Showcase for premium perfume collections ✅
 
-- 🛒 Add to Cart System using JavaScript
+- 🛒 Add to Cart System using JavaScript 🔃
 
-- 📱 Responsive Design for desktop, tablet and mobile
+- 📱 Responsive Design for desktop, tablet and mobile ✅
 
-- ⚡ Lightweight, no frameworks — fully built with Vanilla JS
+- ⚡ Lightweight, no frameworks — fully built with Vanilla JS ✅
 
 ## Tech Stack
 
@@ -23,13 +23,9 @@ This project showcases an elegant product display, smooth user interactions, and
 
 - JavaScript
 
-## How to Run on Local Device
+## Now Live at
 
-- Download or clone this repository
-
-- Open index.html directly in your browser
-
-- Done — no build step needed
+links : https://aureon-le-parfum.vercel.app/
 
 
 ## Preview
