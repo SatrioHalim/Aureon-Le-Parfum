@@ -79,6 +79,38 @@ body{
     display: none;
 }
 
+/* Navbar Search Form */
+.navbar .search-form{
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: white;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .search-form.active{
+    transform: scaleY(1);
+}
+
+.navbar .search-form #search-box{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--secondary);
+    padding: 1rem;
+}
+.navbar .search-form label{
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--secondary);
+}
 /* Hero Section */
 .hero{
     min-height: 100vh;
@@ -328,7 +360,10 @@ footer .credit a{
     .navbar .navbar-nav a:hover:after{
         transform: scaleX(0.2);
     }
-
+    .navbar .search-form{
+        width: 90%;
+        right: 2rem;
+    }
     .about .row{
         flex-wrap: wrap;
     }
