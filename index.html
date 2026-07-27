@@ -1,208 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Auréon Le Parfum</title>
     <!-- Styling -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Icons (Feather Icons) -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-
-</head>
-    <!-- Link Belajar : https://www.youtube.com/watch?v=MCVkMmYL-aY -->
-    <!-- Link Belajar Part 2 : https://www.youtube.com/watch?v=kvyJPvJKTBI -->
-    <!-- Lanjut menit 47.15 -->
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- Link Belajar : https://www.youtube.com/watch?v=MCVkMmYL-aY -->
+  <!-- Link Belajar Part 2 : https://www.youtube.com/watch?v=kvyJPvJKTBI -->
+  <!-- Lanjut part 3 -->
+  <body>
     <!-- Navbar Start -->
-     <nav class="navbar">
-        <a href="#" class="navbar-logo"><span>Auréon </span> Le Parfum</a>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"><span>Auréon </span> Le Parfum</a>
 
-        <div class="navbar-nav">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#product">Product</a>
-            <a href="#contact">Contact</a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#product">Product</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search Form End -->
+
+      <!-- Shopping Card Start -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
         </div>
-
-        <div class="navbar-extra">
-            <a href="#" id="search-button"><i data-feather="search"></i></a>
-            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        <div class="cart-item">
+          <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
         </div>
-        <!-- Search Form Start -->
-         <div class="search-form">
-            <input type="search" id="search-box" placeholder="search here...">
-            <label for="search-box"><i data-feather="search"></i></label>
-         </div>
-        <!-- Search Form End -->
-
-     </nav>
+        <div class="cart-item">
+          <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- Shopping Card End -->
+    </nav>
     <!-- Navbar End -->
-    
+
     <!-- Hero Section Start -->
-     <section class="hero" id="home">
-        <main class="content">
-            <h1>Unveil Your <span>Golden Aura</span></h1>
-            <p>Discover timeless fragrances crafted <br>for the modern gentleman.</p>
-            <a href="#" class="cta">Buy Now</a>
-        </main>
-     </section>
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Unveil Your <span>Golden Aura</span></h1>
+        <p>
+          Discover timeless fragrances crafted <br />for the modern gentleman.
+        </p>
+        <a href="#" class="cta">Buy Now</a>
+      </main>
+    </section>
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-     <section class="about" id="about">
-        <h2><span>About </span>Us</h2>
-        <div class="row">
-            <div class="about-img">
-                <img src="assets/about-image.jpg" alt="about image">
-            </div>
-            <div class="content">
-                <h3>Why Choose Auréon?</h3>
-                <p>Auréon Parfum was created with one purpose: to redefine the essence of modern masculinity.We craft premium fragrances that blend elegance, strength, and timeless character—designed for men who want to leave a lasting impression.</p>
-
-                <p>Each scent is developed with attention to quality, detail, and identity.We believe a fragrance isn’t just something you wear—it’s a signature that speaks before you do.</p>
-                
-            </div>
+    <section class="about" id="about">
+      <h2><span>About </span>Us</h2>
+      <div class="row">
+        <div class="about-img">
+          <img src="assets/about-image.jpg" alt="about image" />
         </div>
-     </section>
+        <div class="content">
+          <h3>Why Choose Auréon?</h3>
+          <p>
+            Auréon Parfum was created with one purpose: to redefine the essence
+            of modern masculinity.We craft premium fragrances that blend
+            elegance, strength, and timeless character—designed for men who want
+            to leave a lasting impression.
+          </p>
+
+          <p>
+            Each scent is developed with attention to quality, detail, and
+            identity.We believe a fragrance isn’t just something you wear—it’s a
+            signature that speaks before you do.
+          </p>
+        </div>
+      </div>
+    </section>
     <!-- About Section End -->
 
     <!-- Product Section Start -->
-     <section id="product" class="product">
-        <h2><span>Our </span>Products</h2>
-        <p>Discover our curated selection of masculine fragrances crafted with refined notes and timeless character.Each scent is designed to elevate your presence and become your signature.</p>
+    <section id="product" class="product">
+      <h2><span>Our </span>Products</h2>
+      <p>
+        Discover our curated selection of masculine fragrances crafted with
+        refined notes and timeless character.Each scent is designed to elevate
+        your presence and become your signature.
+      </p>
 
-        <div class="row">
-            <div class="product-card">
-                <div class="product-icons">
-                    <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
-                </div>
-                <div class="product-image">
-                    <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1">
-                </div>
-                <div class="product-content">
-                    <h3>Auréon Noctis</h3>
-                    <div class="product-stars">
-                        <i data-feather="star" class="star-full"></i>
-                        <i data-feather="star" class="star-full"></i>
-                        <i data-feather="star" class="star-full"></i>
-                        <i data-feather="star" class="star-full"></i>
-                        <i data-feather="star"></i>
-                    </div>
-                    <div class="product-price">
-                        IDR 150K <span>IDR 200K</span>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Auréon Noctis</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
             </div>
-            <div class="product-card">
-                <div class="product-icons">
-                    <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
-                </div>
-                <div class="product-image">
-                    <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1">
-                </div>
-                <div class="product-content">
-                    <h3>Auréon Noctis</h3>
-                    <div class="product-stars">
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                    </div>
-                    <div class="product-price">
-                        IDR 150K <span>IDR 200K</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-icons">
-                    <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
-                </div>
-                <div class="product-image">
-                    <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1">
-                </div>
-                <div class="product-content">
-                    <h3>Auréon Noctis</h3>
-                    <div class="product-stars">
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                    </div>
-                    <div class="product-price">
-                        IDR 150K <span>IDR 200K</span>
-                    </div>
-                </div>
-            </div>
+            <div class="product-price">IDR 150K <span>IDR 200K</span></div>
+          </div>
         </div>
-     </section>
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Auréon Noctis</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 150K <span>IDR 200K</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Auréon Noctis</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 150K <span>IDR 200K</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Product Section End -->
 
-     <!-- Contact Section Start -->
-      <section id="contact" class="contact">
-        <h2><span>Contact </span>Us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, mollitia.</p>
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+      <h2><span>Contact </span>Us</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+        mollitia.
+      </p>
 
-        <div class="row">
-            <!-- Google Maps -->
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126936.97195610912!2d106.67468588669408!3d-6.160162251840228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7c9d110d719%3A0x300c5e82dd4b8a0!2sJakarta%20Barat%2C%20Kec.%20Kb.%20Jeruk%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1764568850179!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-            <form action="">
-                <div class="input-group">
-                    <i data-feather="user"></i>
-                    <input type="text" name="name" placeholder="name" id="input-name">
-                    
-                </div>
-                <div class="input-group">
-                    <i data-feather="mail"></i>
-                    <input type="text" name="email" placeholder="email" id="input-email">
+      <div class="row">
+        <!-- Google Maps -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126936.97195610912!2d106.67468588669408!3d-6.160162251840228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7c9d110d719%3A0x300c5e82dd4b8a0!2sJakarta%20Barat%2C%20Kec.%20Kb.%20Jeruk%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1764568850179!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" name="name" placeholder="name" id="input-name" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input
+              type="text"
+              name="email"
+              placeholder="email"
+              id="input-email"
+            />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input
+              type="text"
+              name="phone"
+              placeholder="phone number"
+              id="input-phone"
+            />
+          </div>
+          <button type="submit" class="btnSubmit">send message</button>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Section End -->
 
-                </div>
-                <div class="input-group">
-                    <i data-feather="phone"></i>
-                    <input type="text" name="phone" placeholder="phone number" id="input-phone">
-                </div>
-                <button type="submit" class="btnSubmit">send message</button>
-            </form>
-        </div>
-      </section>
-     <!-- Contact Section End -->
+    <!-- Footer Start -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#product">Product</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="">satriohalim</a>. | &copy; 2025.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
 
-     <!-- Footer Start -->
-      <footer>
-        <div class="socials">
-            <a href="#"><i data-feather="instagram"></i></a>
-            <a href="#"><i data-feather="twitter"></i></a>
-            <a href="#"><i data-feather="facebook"></i></a>
+    <!-- Modal Box Item Detail Start -->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
+          <div class="product-content">
+            <h3>Product 1</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+              error, laboriosam id quam architecto unde consequatur doloremque
+              perferendis odio atque autem quas aperiam distinctio
+              reprehenderit.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 150K <span>IDR 200K</span></div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i><span>add to cart</span></a
+            >
+          </div>
         </div>
-        <div class="links">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#product">Product</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="credit">
-            <p>Created by <a href="">satriohalim</a>. | &copy; 2025.</p>
-        </div>
-      </footer>
-     <!-- Footer End -->
+      </div>
+    </div>
+    <!-- Modal Box Item Detail End -->
 
     <!-- Icon (Feather Icons) -->
     <script>
-        feather.replace();
+      feather.replace();
     </script>
 
     <!-- Javasript -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
