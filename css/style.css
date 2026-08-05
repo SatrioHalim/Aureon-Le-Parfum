@@ -113,6 +113,21 @@ body {
 }
 
 /* Shopping Cart */
+#shopping-cart-button{
+  position: relative;
+}
+
+#shopping-cart-button .quantity-badge{
+  display: inline-block;
+  padding: 1px 5px;
+  background-color: red;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
 .shopping-cart {
   position: absolute;
   top: 100%;
@@ -256,6 +271,10 @@ body {
   -webkit-mask-size: 50%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
+  mask-image: url(../assets/heart-shape.svg);
+  mask-size: 50%;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 .about .row .content {
   flex: 1 1 35rem;
@@ -327,11 +346,6 @@ body {
 .product .product-price {
   font-size: 1.3rem;
   font-weight: bold;
-}
-.product .product-price span {
-  text-decoration: line-through;
-  font-weight: lighter;
-  font-size: 1rem;
 }
 
 /* Contact Section */

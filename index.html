@@ -15,16 +15,28 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- App -->
+    <script src="src/app.js"></script>
   </head>
+
+  <!-- Big credits to pak sandhika :) -->
+
   <!-- Link Belajar : https://www.youtube.com/watch?v=MCVkMmYL-aY -->
   <!-- Link Belajar Part 2 : https://www.youtube.com/watch?v=kvyJPvJKTBI -->
   <!-- Link Belajar Part 3 : https://youtu.be/-O3YBgWgBdc?si=CmSRFrDuaE7S3NuL -->
   <!-- Part 3: fokus masking | Next bisa coba tips yg menit 18.00 -->
+  <!-- Link Belajar Part 4 : https://youtu.be/-O3YBgWgBdc?si=CmSRFrDuaE7S3NuL -->
 
-  <!-- Lanjut part 3 -->
+  <!-- Lanjut part 4, menit : 23.19 -->
+
   <body>
     <!-- Navbar Start -->
-    <nav class="navbar">
+    <nav class="navbar" x-data>
       <a href="#" class="navbar-logo"><span>Auréon </span> Le Parfum</a>
 
       <div class="navbar-nav">
@@ -36,9 +48,10 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart-button"
-          ><i data-feather="shopping-cart"></i
-        ></a>
+        <a href="#" id="shopping-cart-button">
+          <i data-feather="shopping-cart"></i>
+          <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
       <!-- Search Form Start -->
@@ -118,7 +131,7 @@
     <!-- About Section End -->
 
     <!-- Product Section Start -->
-    <section id="product" class="product">
+    <section id="product" class="product" x-data="products">
       <h2><span>Our </span>Products</h2>
       <p>
         Discover our curated selection of masculine fragrances crafted with
@@ -127,72 +140,104 @@
       </p>
 
       <div class="row">
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Auréon Noctis</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
+        <template x-for="(item, index) in items" x-key="index">
+          <div class="product-card">
+            <div class="product-icons">
+              <a href="#" @click.prevent="$store.cart.add(item)">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="assets/feather-sprite.svg#shopping-cart" />
+                </svg>
+              </a>
+              <a href="#" class="item-detail-button">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="assets/feather-sprite.svg#eye" />
+                </svg>
+              </a>
             </div>
-            <div class="product-price">IDR 150K <span>IDR 200K</span></div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Auréon Noctis</h3>
-            <div class="product-stars">
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
+            <div class="product-image">
+              <img :src="`assets/products/${item.img}`" :alt="item.name" />
             </div>
-            <div class="product-price">IDR 150K <span>IDR 200K</span></div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="assets/products/Auréon Noctis.jpeg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Auréon Noctis</h3>
-            <div class="product-stars">
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
+            <div class="product-content">
+              <h3 x-text="item.name"></h3>
+              <div class="product-stars">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="assets/feather-sprite.svg#star" />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="assets/feather-sprite.svg#star" />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="assets/feather-sprite.svg#star" />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="assets/feather-sprite.svg#star" />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="assets/feather-sprite.svg#star" />
+                </svg>
+              </div>
+              <div class="product-price">
+                <span x-text="rupiah(item.price)"></span>
+              </div>
             </div>
-            <div class="product-price">IDR 150K <span>IDR 200K</span></div>
           </div>
-        </div>
+        </template>
       </div>
     </section>
     <!-- Product Section End -->
