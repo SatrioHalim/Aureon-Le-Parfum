@@ -9,11 +9,13 @@ This project showcases an elegant product display, smooth user interactions, and
 
 - 🧴 Product Showcase for premium perfume collections ✅
 
-- 🛒 Add to Cart System using JavaScript 🔃
+- 🛒 Add to Cart System using JavaScript ✅
 
 - 📱 Responsive Design for desktop, tablet and mobile ✅
 
 - ⚡ Lightweight, no frameworks — fully built with Vanilla JS ✅
+
+- 💳 Payment gateway (midtrans sandbox) for product checkout 🔃
 
 ## Tech Stack
 
@@ -22,6 +24,8 @@ This project showcases an elegant product display, smooth user interactions, and
 - CSS
 
 - JavaScript
+
+- Alpine js
 
 ## Now Live at
 
