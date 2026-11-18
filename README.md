@@ -15,8 +15,6 @@ This project showcases an elegant product display, smooth user interactions, and
 
 - ⚡ Lightweight, no frameworks — fully built with Vanilla JS ✅
 
-- 💳 Payment gateway (midtrans sandbox) for product checkout 🔃
-
 ## Tech Stack
 
 - HTML5
