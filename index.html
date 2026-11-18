@@ -21,7 +21,7 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <!-- App -->
-    <script src="src/app.js"></script>
+    <script src="src/app.js" async></script>
   </head>
 
   <!-- Big credits to pak sandhika :) -->
@@ -94,6 +94,8 @@
 
         <div class="form-container" x-show="$store.cart.items.length">
           <form action="" id="checkoutForm">
+            <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)" />
+            <input type="hidden" name="total" x-model="JSON.stringify($store.cart.total)" />
             <h5>Customer Detail</h5>
             <label for="name">
               <span>Name</span>
@@ -108,7 +110,7 @@
               <input type="number" name="phone" id="phone" autocomplete="off" />
             </label>
             <button
-              class="checkout-button"
+              class="checkout-button disabled"
               type="submit"
               id="checkout-button"
               value="checkout"
@@ -332,7 +334,14 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="credit">
-        <p>Created by <a href="https://satrio-halim-abdurrahman-web.vercel.app/" target="_blank">satriohalim</a>. | &copy; 2025.</p>
+        <p>
+          Created by
+          <a
+            href="https://satrio-halim-abdurrahman-web.vercel.app/"
+            target="_blank"
+            >satriohalim</a
+          >. | &copy; 2025.
+        </p>
       </div>
     </footer>
     <!-- Footer End -->

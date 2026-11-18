@@ -98,6 +98,48 @@ document.addEventListener("alpine:init", () => {
   });
 });
 
+// form validation
+const checkoutButton = document.querySelector(".checkout-button");
+checkoutButton.disabled = true;
+
+const form = document.querySelector("#checkoutForm");
+form.addEventListener("keyup", function () {
+  for (let i = 0; i < form.elements.length; i++) {
+    if (form.elements[i].value.length !== 0) {
+      checkoutButton.classList.remove("disabled");
+      checkoutButton.classList.add("disabled");
+    } else {
+      return false;
+    }
+  }
+  checkoutButton.disabled = false;
+  checkoutButton.classList.remove("disabled");
+});
+
+// kirim data ketika tombol checkout di klik
+checkoutButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  const formData = new FormData(form); // ambil data dari form
+  const data = new URLSearchParams(formData); // konversi data ke URLSearchParams agar bisa dikirim ke server
+  const objData = Object.fromEntries(data); // konversi data ke object agar bisa diakses dengan mudah
+  const message = formatMessage(objData); // format pesan agar bisa dikirim ke whatsapp
+  window.open("http://wa.me/6281284581960?text=" + encodeURIComponent(message));
+});
+
+// format pesan whatsapp
+const formatMessage = (obj) => {
+  return `Data Customer\n=========================
+Nama : ${obj.name}
+Email : ${obj.email}
+No HP : ${obj.phone}
+  
+Data Pesanan
+==========================
+${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.total)})\n`)}
+TOTAL : ${rupiah(obj.total)}
+Terima kasih.`;
+};
+
 // Konversi ke rupiah
 const rupiah = (number) => {
   return new Intl.NumberFormat("id-ID", {
